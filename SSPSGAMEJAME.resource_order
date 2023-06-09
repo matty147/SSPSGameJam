@@ -18,9 +18,9 @@
   ],
   "ResourceOrderSettings": [
     {"name":"spr_Wall","order":1,"path":"sprites/spr_Wall/spr_Wall.yy",},
-    {"name":"obJ_Box","order":2,"path":"objects/obJ_Box/obJ_Box.yy",},
+    {"name":"obj_Box","order":2,"path":"objects/obj_Box/obj_Box.yy",},
     {"name":"spr_Box","order":3,"path":"sprites/spr_Box/spr_Box.yy",},
     {"name":"spr_bg","order":2,"path":"sprites/spr_bg/spr_bg.yy",},
-    {"name":"obJ_Wall","order":1,"path":"objects/obJ_Wall/obJ_Wall.yy",},
+    {"name":"obj_Wall","order":1,"path":"objects/obj_Wall/obj_Wall.yy",},
   ],
 }

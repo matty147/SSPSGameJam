@@ -1,11 +1,19 @@
 function CollisionCheck(XDir, YDir)
 {
-	if place_meeting(x + XDir * Movement, y + YDir * Movement, obJ_Wall)
+	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Box)
+	{	
+		if !place_meeting(x + XDir * Movement * 2, y + YDir * Movement * 2, obj_Wall)
+		{
+			obj_Box.x = obj_Box.x + XDir * Movement;
+			obj_Box.y = obj_Box.y + YDir * Movement;
+			//show_message("I fucking moved!!!");
+		}else return true;
+	}
+	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Wall)
 	{
 		return true;
 	}else return false;
 }
-
 if (Counter < 0) {
     if (keyboard_check(vk_left)) {
         direction = 90;

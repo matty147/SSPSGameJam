@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obJ_Box",
+  "name": "obj_Box",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
