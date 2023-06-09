@@ -1,25 +1,50 @@
-var Movement = 64;
-var Counter = 60;
+function CollisionCheck(XDir, YDir)
+{
+	if place_meeting(x + XDir * Movement, y + YDir * Movement, obJ_Wall)
+	{
+		return true;
+	}else return false;
+}
 
 if (Counter < 0) {
     if (keyboard_check(vk_left)) {
         direction = 90;
-        x -= Movement;
-    }
-    else if (keyboard_check(vk_right)) {
+		if (CollisionCheck(-1, 0) = false)
+		{
+			 x -= Movement;
+		}
+		Counter = DefCounter;
+    } else if (keyboard_check(vk_right)) {
         direction = 270;
-        x += Movement;	
-    }
-    else if (keyboard_check(vk_up)) {
+		if (CollisionCheck(1, 0) = false)
+		{
+			x += Movement;
+		}
+		Counter = DefCounter;
+    } else if (keyboard_check(vk_up)) {
         direction = 0;
-        y -= Movement;
-    }
-    else if (keyboard_check(vk_down)) {
+		if (CollisionCheck(0, 1) = false)
+		{
+			y -= Movement;
+		}
+		Counter = DefCounter;
+    } else if (keyboard_check(vk_down)) {
         direction = 180;
-        y += Movement;
+		if (CollisionCheck(0, -1) = false)
+		{
+			y += Movement;
+		}
+		Counter = DefCounter;
     }
-    Counter = 60;
     image_angle = direction;
 }
+Counter--;
+//show_message(Counter);
 
-Counter = Counter - 1;
+
+
+
+
+
+
+
