@@ -2,10 +2,12 @@ function CollisionCheck(XDir, YDir)
 {
 	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Box)
 	{	
-		if !place_meeting(x + XDir * Movement * 2, y + YDir * Movement * 2, obj_Wall)
+		var colliding_box_id = instance_place(x + XDir * Movement, y + YDir * Movement, obj_Box);
+		//show_message(colliding_box_id)
+		if !place_meeting(x + XDir * Movement * 2, y + YDir * Movement * 2, obj_Wall) && !place_meeting(x + XDir * Movement * 2, y + YDir * Movement * 2, obj_Box)
 		{
-			obj_Box.x = obj_Box.x + XDir * Movement;
-			obj_Box.y = obj_Box.y + YDir * Movement;
+			colliding_box_id.x = colliding_box_id.x + XDir * Movement;
+			colliding_box_id.y = colliding_box_id.y + YDir * Movement;
 			//show_message("I fucking moved!!!");
 		}else return true;
 	}
