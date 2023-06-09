@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obJ_Wall",
+  "name": "obJ_Box",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Wall",
-    "path": "sprites/spr_Wall/spr_Wall.yy",
+    "name": "spr_Box",
+    "path": "sprites/spr_Box/spr_Box.yy",
   },
   "spriteMaskId": null,
   "visible": true,

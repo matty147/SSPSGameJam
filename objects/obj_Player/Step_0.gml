@@ -23,14 +23,14 @@ if (Counter < 0) {
 		Counter = DefCounter;
     } else if (keyboard_check(vk_up)) {
         direction = 0;
-		if (CollisionCheck(0, 1) = false)
+		if (CollisionCheck(0, -1) = false)
 		{
 			y -= Movement;
 		}
 		Counter = DefCounter;
     } else if (keyboard_check(vk_down)) {
         direction = 180;
-		if (CollisionCheck(0, -1) = false)
+		if (CollisionCheck(0, 1) = false)
 		{
 			y += Movement;
 		}
