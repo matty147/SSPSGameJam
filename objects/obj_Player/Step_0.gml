@@ -51,7 +51,53 @@ if (Counter < 0) {
 Counter--;
 //show_message(Counter);
 
-
+if (JustChangedSize == 0)
+{
+	if place_meeting(x, y, obj_MakePlayerBigger)
+	{
+		if (PlayerSize <= 5)
+		{
+			PlayerSize++;
+			JustChangedSize = 1;
+		}
+	}else if place_meeting(x, y, obj_MakePlayerSmaller)
+	{
+		if (PlayerSize >= 1)
+		{
+			PlayerSize--;
+			JustChangedSize = 1;
+		}
+		JustChangedSize = 1;	
+	}
+	//Movement = Movement * PlayerSize;
+}
+ //def of player size is 3
+if (PlayerSize = 1)
+{
+	image_xscale = 0.25;
+	image_yscale = 0.25;
+}else if (PlayerSize = 2)
+{
+	image_xscale = 0.5;
+	image_yscale = 0.5;
+}else if (PlayerSize = 3)
+{
+	image_xscale = 1;
+	image_yscale = 1;
+}else if (PlayerSize = 4)
+{
+	image_xscale = 1.5;
+	image_yscale = 1.5;
+}else if (PlayerSize = 5)
+{
+	image_xscale = 2;
+	image_yscale = 2;
+}
+	
+if !place_meeting(x, y, obj_MakePlayerBigger) && !place_meeting(x, y, obj_MakePlayerSmaller)
+{
+JustChangedSize = 0;	
+}
 
 
 
