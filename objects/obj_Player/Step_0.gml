@@ -7,10 +7,9 @@ function CollisionCheck(XDir, YDir)
 		{
 			colliding_box_id.x = colliding_box_id.x + XDir * Movement;
 			colliding_box_id.y = colliding_box_id.y + YDir * Movement;
-			//show_message("I fucking moved!!!");
 		}else return true;
 	}
-	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Wall)
+	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Wall) || place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Door)
 	{
 		return true;
 	}else return false;
@@ -98,12 +97,25 @@ if !place_meeting(x, y, obj_MakePlayerBigger) && !place_meeting(x, y, obj_MakePl
 JustChangedSize = 0;	
 }
 
-if place_meeting(x,y,obj_Timer) //can make it that the player can make it without the timer
+if place_meeting(x,y,obj_Timer) || (keyboard_check(vk_pagedown) && Cooldown <= 0) //can make it that the player can make it without the timer
 {
+	/*
+	if (x % 32 == 0)
+	{
+		AmIOnFullBlockX = 32;
+	}else AmIOnFullBlockX = 0
+	
+	
+	if (y % 32 == 0)
+	{
+		AmIOnFullBlockY = 32;
+	}else AmIOnFullBlockY = 0
+	*/
+	
 	if (!ds_list_empty(LastXMoves) && !ds_list_empty(LastYMoves))
 	{
-		x = ds_list_find_value(LastXMoves, 0);
-		y = ds_list_find_value(LastYMoves, 0);
+		x = ds_list_find_value(LastXMoves, 0);// - AmIOnFullBlockX;
+		y = ds_list_find_value(LastYMoves, 0);// - AmIOnFullBlockY;
 		ds_list_clear(LastXMoves);
 		ds_list_clear(LastYMoves);
 	}
@@ -125,7 +137,7 @@ if place_meeting(x,y,obj_Timer) //can make it that the player can make it withou
 if (keyboard_check(vk_pageup) && Cooldown <= 0)
 {
 
-	global.BulletTime = 600;
+	global.BulletTime = 300;
 	Cooldown = DefCooldown;
 }
 if (Cooldown > 0)

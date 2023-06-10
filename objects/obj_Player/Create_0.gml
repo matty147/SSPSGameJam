@@ -8,3 +8,5 @@ LastYMoves = ds_list_create();
 MaxMovesKnow = 10;
 global.BulletTime = 0; 
 DefCooldown = Cooldown;
+AmIOnFullBlockX = 0;
+AmIOnFullBlockY = 0;
