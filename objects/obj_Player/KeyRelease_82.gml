@@ -1,2 +1,4 @@
-room_restart();
-//game_restart();
+if (keyboard_check(vk_rshift))
+{
+	game_restart();
+}else room_restart();

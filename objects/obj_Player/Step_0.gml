@@ -3,7 +3,6 @@ function CollisionCheck(XDir, YDir)
 	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Box)
 	{	
 		var colliding_box_id = instance_place(x + XDir * Movement, y + YDir * Movement, obj_Box);
-		//show_message(colliding_box_id)
 		if !place_meeting(x + XDir * Movement * 2, y + YDir * Movement * 2, obj_Wall) && !place_meeting(x + XDir * Movement * 2, y + YDir * Movement * 2, obj_Box)
 		{
 			colliding_box_id.x = colliding_box_id.x + XDir * Movement;
@@ -99,7 +98,7 @@ if !place_meeting(x, y, obj_MakePlayerBigger) && !place_meeting(x, y, obj_MakePl
 JustChangedSize = 0;	
 }
 
-if place_meeting(x,y,obj_Timer)
+if place_meeting(x,y,obj_Timer) //can make it that the player can make it without the timer
 {
 	if (!ds_list_empty(LastXMoves) && !ds_list_empty(LastYMoves))
 	{
