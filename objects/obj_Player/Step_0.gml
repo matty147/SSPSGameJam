@@ -55,7 +55,7 @@ if (JustChangedSize == 0)
 {
 	if place_meeting(x, y, obj_MakePlayerBigger)
 	{
-		if (PlayerSize <= 5)
+		if (PlayerSize <= MaxMovesKnow)
 		{
 			PlayerSize++;
 			JustChangedSize = 1;
@@ -99,7 +99,29 @@ if !place_meeting(x, y, obj_MakePlayerBigger) && !place_meeting(x, y, obj_MakePl
 JustChangedSize = 0;	
 }
 
-
+if place_meeting(x,y,obj_Timer)
+{
+	if (!ds_list_empty(LastXMoves) && !ds_list_empty(LastYMoves))
+	{
+		x = ds_list_find_value(LastXMoves, 0);
+		y = ds_list_find_value(LastYMoves, 0);
+		ds_list_clear(LastXMoves);
+		ds_list_clear(LastYMoves);
+	}
+}else
+{
+	if (x != xprevious || y != yprevious)
+	{
+		if (ds_list_size(LastXMoves) >= 5)
+		{
+			ds_list_delete(LastXMoves, 0);
+			ds_list_delete(LastYMoves, 0);
+		}
+		//show_message(ds_list_size(LastXMoves));
+		ds_list_add(LastXMoves, x);
+		ds_list_add(LastYMoves, y);
+	}
+}
 
 
 
