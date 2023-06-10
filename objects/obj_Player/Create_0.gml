@@ -6,3 +6,5 @@ PlayerSize = 3;
 LastXMoves = ds_list_create();
 LastYMoves = ds_list_create();
 MaxMovesKnow = 10;
+global.BulletTime = 0; 
+DefCooldown = Cooldown;

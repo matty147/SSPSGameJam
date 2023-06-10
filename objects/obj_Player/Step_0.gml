@@ -111,7 +111,7 @@ if place_meeting(x,y,obj_Timer) //can make it that the player can make it withou
 {
 	if (x != xprevious || y != yprevious)
 	{
-		if (ds_list_size(LastXMoves) >= 5)
+		if (ds_list_size(LastXMoves) >= CanGoXStepsBack)
 		{
 			ds_list_delete(LastXMoves, 0);
 			ds_list_delete(LastYMoves, 0);
@@ -121,6 +121,19 @@ if place_meeting(x,y,obj_Timer) //can make it that the player can make it withou
 		ds_list_add(LastYMoves, y);
 	}
 }
+
+if (keyboard_check(vk_pageup) && Cooldown <= 0)
+{
+
+	global.BulletTime = 600;
+	Cooldown = DefCooldown;
+}
+if (Cooldown > 0)
+{
+	Cooldown--;
+}
+global.BulletTime--;
+
 
 
 

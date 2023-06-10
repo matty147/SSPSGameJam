@@ -31,6 +31,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"YDir","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":1.0,"rangeMin":-1.0,"value":"1","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Movement","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"64","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Counter","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"30","varType":1,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"SlownDownSpeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.5","varType":0,},
   ],
   "solid": false,
   "spriteId": {

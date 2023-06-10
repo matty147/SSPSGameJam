@@ -3,3 +3,4 @@
 //YDir = 0;
 //Counter = 30;
 DefCounter = Counter;
+DefSlownDownSpeed = SlownDownSpeed;

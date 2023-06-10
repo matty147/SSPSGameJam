@@ -1,3 +1,9 @@
+if (global.BulletTime >= 0 )
+{
+	SlownDownSpeed = DefSlownDownSpeed;
+	//show_message("slow");
+}else SlownDownSpeed = 1;
+
 if (Counter <= 0)
 {
 	if place_meeting(x + Movement * XDir, y + Movement * YDir, obj_Player)
@@ -22,7 +28,8 @@ if (Counter <= 0)
 		x = x + Movement * XDir;
 		y = y + Movement * YDir;
 		//y += Movement;
-		Counter = DefCounter;
+		Counter = DefCounter / SlownDownSpeed;
+		//show_message(Counter);
 	}else if place_meeting(x + Movement * XDir, y + Movement * YDir, obj_Wall)
 	{
 		XDir = XDir * -1;
