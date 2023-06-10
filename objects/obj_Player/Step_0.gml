@@ -69,24 +69,16 @@ if (JustChangedSize == 0)
 	}
 	//Movement = Movement * PlayerSize;
 }
- //def of player size is 3
+ //def of player size is 2
 if (PlayerSize = 1)
-{
-	image_xscale = 0.25;
-	image_yscale = 0.25;
-}else if (PlayerSize = 2)
 {
 	image_xscale = 0.5;
 	image_yscale = 0.5;
-}else if (PlayerSize = 3)
+}else if (PlayerSize = 2)
 {
 	image_xscale = 1;
 	image_yscale = 1;
-}else if (PlayerSize = 4)
-{
-	image_xscale = 1.5;
-	image_yscale = 1.5;
-}else if (PlayerSize = 5)
+}else if (PlayerSize = 3)
 {
 	image_xscale = 2;
 	image_yscale = 2;
@@ -134,7 +126,7 @@ if place_meeting(x,y,obj_Timer) || (keyboard_check(vk_pagedown) && Cooldown <= 0
 	}
 }
 
-if (keyboard_check(vk_pageup) && Cooldown <= 0)
+if (keyboard_check(vk_pageup))
 {
 
 	global.BulletTime = 350;
