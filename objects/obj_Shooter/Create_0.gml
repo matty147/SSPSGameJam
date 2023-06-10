@@ -1,1 +1,2 @@
 DefSpeed = Speed;
+DefSlownDownSpeed = SlownDownSpeed;

@@ -137,7 +137,7 @@ if place_meeting(x,y,obj_Timer) || (keyboard_check(vk_pagedown) && Cooldown <= 0
 if (keyboard_check(vk_pageup) && Cooldown <= 0)
 {
 
-	global.BulletTime = 300;
+	global.BulletTime = 350;
 	Cooldown = DefCooldown;
 }
 if (Cooldown > 0)
