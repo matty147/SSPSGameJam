@@ -28,7 +28,7 @@ function CalculateMovement(Dir)
 
 if (Counter < 0) {
     if (keyboard_check(vk_left)) {
-        //direction = 90;
+        direction = 180;
 		if (CollisionCheck(-1, 0) = false)
 		{
 			 x -= Movement;
@@ -36,7 +36,7 @@ if (Counter < 0) {
 		}
 		Counter = DefCounter;
     } else if (keyboard_check(vk_right)) {
-        //direction = 270;
+        direction = 0;
 		if (CollisionCheck(1, 0) = false)
 		{
 			x += Movement;
@@ -44,7 +44,7 @@ if (Counter < 0) {
 		}
 		Counter = DefCounter;
     } else if (keyboard_check(vk_up)) {
-        //direction = 0;
+        direction = 90;
 		if (CollisionCheck(0, -1) = false)
 		{
 			y -= Movement;
@@ -52,7 +52,7 @@ if (Counter < 0) {
 		}
 		Counter = DefCounter;
     } else if (keyboard_check(vk_down)) {
-       //direction = 180;
+       direction = 270;
 		if (CollisionCheck(0, 1) = false)
 		{
 			y += Movement;
@@ -60,7 +60,7 @@ if (Counter < 0) {
 		}
 		Counter = DefCounter;
     }
-    //image_angle = direction;
+    image_angle = direction;
 }
 Counter--;
 //show_message(Counter);
