@@ -3,13 +3,13 @@ function CollisionCheck(XDir, YDir)
 	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Box)
 	{	
 		var colliding_box_id = instance_place(x + XDir * Movement, y + YDir * Movement, obj_Box);
-		if !place_meeting(x + XDir * Movement * 2, y + YDir * Movement * 2, obj_Wall) && !place_meeting(x + XDir * Movement * 2, y + YDir * Movement * 2, obj_Box)
+		if !place_meeting(x + CalculateMovement(XDir) * 2, y + CalculateMovement(YDir) * 2, obj_Wall) && !place_meeting(x + CalculateMovement(XDir) * 2, y + CalculateMovement(YDir) * 2, obj_Box)
 		{
 			colliding_box_id.x = colliding_box_id.x + XDir * Movement;
 			colliding_box_id.y = colliding_box_id.y + YDir * Movement;
 		}else return true;
 	}
-	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Wall) || place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Door) ||  place_meeting(x + XDir * Movement, y + YDir * Movement, obj_MovingWall)
+	if place_meeting(x + CalculateMovement(XDir), y +CalculateMovement(YDir), obj_Wall) || place_meeting(x + CalculateMovement(XDir), y +CalculateMovement(YDir), obj_Door) ||  place_meeting(x + CalculateMovement(XDir), y +CalculateMovement(YDir), obj_MovingWall)
 	{
 		return true;
 	}else return false;
@@ -20,6 +20,10 @@ function ShouldIstartTime()
 	{
 		global.Stoptime = 1;	
 	}else StopTimeMoves--;
+}
+function CalculateMovement(Dir)
+{
+	return Dir * Movement;
 }
 
 if (Counter < 0) {
