@@ -14,12 +14,21 @@ function CollisionCheck(XDir, YDir)
 		return true;
 	}else return false;
 }
+function ShouldIstartTime()
+{
+	if (StopTimeMoves <= 0)
+	{
+		global.Stoptime = 1;	
+	}else StopTimeMoves--;
+}
+
 if (Counter < 0) {
     if (keyboard_check(vk_left)) {
         direction = 90;
 		if (CollisionCheck(-1, 0) = false)
 		{
 			 x -= Movement;
+			 ShouldIstartTime();
 		}
 		Counter = DefCounter;
     } else if (keyboard_check(vk_right)) {
@@ -27,6 +36,7 @@ if (Counter < 0) {
 		if (CollisionCheck(1, 0) = false)
 		{
 			x += Movement;
+			ShouldIstartTime();
 		}
 		Counter = DefCounter;
     } else if (keyboard_check(vk_up)) {
@@ -34,6 +44,7 @@ if (Counter < 0) {
 		if (CollisionCheck(0, -1) = false)
 		{
 			y -= Movement;
+			ShouldIstartTime();
 		}
 		Counter = DefCounter;
     } else if (keyboard_check(vk_down)) {
@@ -41,6 +52,7 @@ if (Counter < 0) {
 		if (CollisionCheck(0, 1) = false)
 		{
 			y += Movement;
+			ShouldIstartTime();
 		}
 		Counter = DefCounter;
     }
@@ -137,6 +149,19 @@ if (Cooldown > 0)
 	Cooldown--;
 }
 global.BulletTime--;
+
+
+if (keyboard_check(vk_shift))
+{
+	if (global.Stoptime == 1)
+	{
+		global.Stoptime = 0;
+	}else
+	{
+		global.Stoptime = 0;
+		StopTimeMoves = 5;
+	}
+}
 
 
 

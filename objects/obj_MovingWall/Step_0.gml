@@ -25,8 +25,8 @@ if (Counter <= 0)
 	}
 	if !place_meeting(x + Movement  * XDir, y + Movement * YDir, obj_Wall)
 	{
-		x = x + Movement * XDir;
-		y = y + Movement * YDir;
+		x = x + Movement * XDir * global.Stoptime;
+		y = y + Movement * YDir * global.Stoptime;
 		//y += Movement;
 		Counter = DefCounter / SlownDownSpeed;
 		//show_message(Counter);

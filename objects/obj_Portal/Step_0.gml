@@ -1,4 +1,4 @@
-image_angle++;
+image_angle += global.Stoptime;
 
 if place_meeting(x, y, obj_Player)
 {
