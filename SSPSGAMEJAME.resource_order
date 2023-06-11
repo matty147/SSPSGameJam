@@ -27,6 +27,7 @@
     {"name":"spr_Text2","order":2,"path":"sprites/spr_Text2/spr_Text2.yy",},
     {"name":"EndRoom","order":8,"path":"rooms/EndRoom/EndRoom.yy",},
     {"name":"Lvl2Nerf","order":5,"path":"rooms/Lvl2Nerf/Lvl2Nerf.yy",},
+    {"name":"HardEndRoom","order":10,"path":"rooms/HardEndRoom/HardEndRoom.yy",},
     {"name":"spr_MakePlayerSmaller","order":10,"path":"sprites/spr_MakePlayerSmaller/spr_MakePlayerSmaller.yy",},
     {"name":"obj_MainMenu","order":3,"path":"objects/obj_MainMenu/obj_MainMenu.yy",},
     {"name":"obj_Shooter","order":12,"path":"objects/obj_Shooter/obj_Shooter.yy",},
