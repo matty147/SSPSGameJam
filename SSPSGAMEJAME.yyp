@@ -68,6 +68,7 @@
     {"id":{"name":"obj_MakePlayerSmaller","path":"objects/obj_MakePlayerSmaller/obj_MakePlayerSmaller.yy",},},
     {"id":{"name":"obj_Spike","path":"objects/obj_Spike/obj_Spike.yy",},},
     {"id":{"name":"spr_bg","path":"sprites/spr_bg/spr_bg.yy",},},
+    {"id":{"name":"fnt_Large","path":"fonts/fnt_Large/fnt_Large.yy",},},
     {"id":{"name":"LVl3","path":"rooms/LVl3/LVl3.yy",},},
     {"id":{"name":"spr_MakePlayerBigger","path":"sprites/spr_MakePlayerBigger/spr_MakePlayerBigger.yy",},},
     {"id":{"name":"obj_Portal","path":"objects/obj_Portal/obj_Portal.yy",},},
