@@ -111,6 +111,7 @@
     {"name":"inst_90D28AC","path":"rooms/Lvl2Nerf/Lvl2Nerf.yy",},
     {"name":"inst_4CD0B61D","path":"rooms/Lvl2Nerf/Lvl2Nerf.yy",},
     {"name":"inst_336D5761","path":"rooms/Lvl2Nerf/Lvl2Nerf.yy",},
+    {"name":"inst_6D98846C","path":"rooms/Lvl2Nerf/Lvl2Nerf.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -134,6 +135,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Shooter","path":"objects/obj_Shooter/obj_Shooter.yy",},"propertyId":{"name":"SlownDownSpeed","path":"objects/obj_Shooter/obj_Shooter.yy",},"value":"0.25",},
           ],"rotation":180.0,"scaleX":2.0,"scaleY":2.0,"x":1280.0,"y":544.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5292C74C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":480.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6D98846C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Portal","path":"objects/obj_Portal/obj_Portal.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":480.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Wall","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6749693C_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":736.0,},

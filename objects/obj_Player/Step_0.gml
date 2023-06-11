@@ -150,7 +150,7 @@ if (Cooldown > 0)
 }
 global.BulletTime--;
 
-
+/*
 if (keyboard_check(vk_shift))
 {
 	if (global.Stoptime == 1)
@@ -162,6 +162,7 @@ if (keyboard_check(vk_shift))
 		StopTimeMoves = 5;
 	}
 }
+*/
 
 
 
