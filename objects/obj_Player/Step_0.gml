@@ -9,7 +9,7 @@ function CollisionCheck(XDir, YDir)
 			colliding_box_id.y = colliding_box_id.y + YDir * Movement;
 		}else return true;
 	}
-	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Wall) || place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Door)
+	if place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Wall) || place_meeting(x + XDir * Movement, y + YDir * Movement, obj_Door) ||  place_meeting(x + XDir * Movement, y + YDir * Movement, obj_MovingWall)
 	{
 		return true;
 	}else return false;
